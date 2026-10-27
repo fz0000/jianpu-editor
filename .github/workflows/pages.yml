@@ -21,6 +21,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - uses: actions/setup-node@v4
         with:
           node-version: 24.x
@@ -29,9 +33,14 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
+      - name: Verify build output
+        run: |
+          echo "=== dist 目录内容 ==="
+          ls -la dist/
+          ls -la dist/assets/ || true
+          echo "=== dist/index.html 前 15 行 ==="
+          head -15 dist/index.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -44,4 +53,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
