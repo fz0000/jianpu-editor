@@ -1,0 +1,36 @@
+# 依赖与构建产物
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+*.tsbuildinfo
+
+# 本地临时文件
+*.log
+npm-debug.log*
+yarn-error.log*
+dev.log
+.tmp-profile/
+tmp-profile/
+.tmp/
+tmp/
+
+
+/local-samples/
+
+# 编辑器与操作系统
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+
+# 环境变量
+.env
+.env.*
+!.env.example

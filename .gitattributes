@@ -1,0 +1,16 @@
+# 统一按 LF 入库，避免 Windows 上整仓 CRLF 噪声
+* text=auto eol=lf
+
+# 二进制样本：不做换行转换，也不做文本 diff
+*.mid binary
+*.midi binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.woff binary
+*.woff2 binary
+
+# 语言统计
+*.ts linguist-language=TypeScript
+*.mjs linguist-language=TypeScript

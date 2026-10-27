@@ -1,0 +1,28 @@
+{
+  "name": "jianpu-editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Web-based jianpu (numbered musical notation) editor with visual editing and MIDI import/export",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "node scripts/clean.mjs",
+    "make:sample-midi": "node scripts/make-sample-midi.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "happy-dom": "^21.0.4",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.4"
+  }
+}
